@@ -4,6 +4,7 @@ var db = require('./config/db_config');
 var Produto = require('./model/Produto');
 var produtoController = require('./controller/produtoController');
 var produtos = require('./routes/produtoRouter');
+var usuario = require('./routes/usuarioRouter');
 
 
 app.get('/', function(req, res){
@@ -12,3 +13,5 @@ app.get('/', function(req, res){
 
 //atribui a dota /produtos arquivo de rota produtoRouter
 app.use('/produtos', produtos);
+
+app.use('/usuarios', usuario);
